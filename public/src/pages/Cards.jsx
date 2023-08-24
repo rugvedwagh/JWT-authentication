@@ -7,6 +7,7 @@ import { toast, ToastContainer } from "react-toastify";
 export default function Cards() {
   const navigate = useNavigate();
   const [cookies, setCookie, removeCookie] = useCookies([]);
+
   useEffect(() => {
     const verifyUser = async () => {
       if (!cookies.jwt) {
