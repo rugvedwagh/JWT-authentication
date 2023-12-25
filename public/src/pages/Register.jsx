@@ -21,7 +21,7 @@ function Register() {
     event.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/register",
+        "https://jwt-auth-mern-h55c.onrender.com/register",
         {
           ...values,
         },
