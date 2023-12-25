@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { ToastContainer, toast } from "react-toastify";
+import { url } from "../App";
 
 function Login() {
   const [cookies] = useCookies([]);
@@ -22,7 +23,7 @@ function Login() {
     event.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://jwt-auth-mern-h55c.onrender.com/login",
+        `${url}/login`,
         {
           ...values,
         },

@@ -3,6 +3,9 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import { useCookies } from "react-cookie";
 import { Link, useNavigate } from "react-router-dom";
+import { url } from "../App";
+
+
 function Register() {
   const [cookies] = useCookies(["cookie-name"]);
   const navigate = useNavigate();
@@ -21,7 +24,7 @@ function Register() {
     event.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://jwt-auth-mern-h55c.onrender.com/register",
+        `${url}/register`,
         {
           ...values,
         },

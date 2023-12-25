@@ -5,6 +5,8 @@ import Login from "./pages/Login";
 import Cards from "./pages/Cards";
 import "react-toastify/dist/ReactToastify.css";
 
+export const url = `http://localhost:4000`
+
 export default function App() {
   return (
     <BrowserRouter>

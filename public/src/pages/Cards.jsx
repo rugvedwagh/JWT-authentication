@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
+import { url } from "../App";
 
 export default function Cards() {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ export default function Cards() {
         navigate("/login");
       } else {
         const { data } = await axios.post(
-          "https://jwt-auth-mern-h55c.onrender.com",
+          `${url}`,
           {},
           {
             withCredentials: true,
