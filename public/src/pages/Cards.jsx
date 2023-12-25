@@ -14,7 +14,7 @@ export default function Cards() {
         navigate("/login");
       } else {
         const { data } = await axios.post(
-          "http://localhost:4000",
+          "https://jwt-auth-mern-h55c.onrender.com",
           {},
           {
             withCredentials: true,
