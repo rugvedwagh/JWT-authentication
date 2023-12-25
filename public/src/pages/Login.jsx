@@ -29,15 +29,16 @@ function Login() {
         },
         { withCredentials: true }
       );
-      if (data) {
-        if (data.errors) {
-          const { email, password } = data.errors;
-          if (email) generateError(email);
-          else if (password) generateError(password);
-        } else {
-          navigate("/");
-        }
-      }
+      // if (data) {
+      //   if (data.errors) {
+      //     const { email, password } = data.errors;
+      //     if (email) generateError(email);
+      //     else if (password) generateError(password);
+      //   } else {
+      //     navigate("/");
+      //   }
+      // }
+      navigate("/");
     } catch (ex) {
       console.log(ex);
     }
