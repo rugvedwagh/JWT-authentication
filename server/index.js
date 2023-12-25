@@ -28,7 +28,7 @@ mongoose
 
 app.use(
   cors({
-    origin: ["https://jwt-auth-mern-h55c.onrender.com/login","https://jwt-auth-mern-h55c.onrender.com"],
+    origin: ["http://localhost:3000"],
     methods: ["GET", "POST"],
     credentials: true,
   })
